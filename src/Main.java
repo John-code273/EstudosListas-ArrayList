@@ -15,25 +15,25 @@ public class Main {
             System.out.println();
             System.out.println("Funciovario #" + (i + 1) + ":");
             System.out.print("ID: ");
-            Integer id = scanner.nextInt();
+            int id = scanner.nextInt();
             System.out.print("Name: ");
             scanner.nextLine();
             String name = scanner.nextLine();
             System.out.print("Salary: ");
-            Double salary = scanner.nextDouble();
+            double salary = scanner.nextDouble();
             Funcionarios funcionarios = new Funcionarios(id, name, salary);
             list.add(funcionarios);
         }
 
         System.out.println();
         System.out.print("Entre com o id do funcionario que receberar o aumento salarial: ");
-        Integer idSalary = scanner.nextInt();
+        int idSalary = scanner.nextInt();
         Integer pos = position(list, idSalary);
         if (pos == null) {
             System.out.println("Esse id nao existe");
         } else {
             System.out.print("Qual a porcentagem do aumento: ");
-            Double porcent = scanner.nextDouble();
+            double porcent = scanner.nextDouble();
             list.get(pos).aumento(porcent);
         }
 
